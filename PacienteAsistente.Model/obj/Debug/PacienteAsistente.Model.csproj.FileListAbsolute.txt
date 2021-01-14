@@ -1,0 +1,12 @@
+C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Model\bin\Debug\PacienteAsistente.Model.dll
+C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Model\bin\Debug\PacienteAsistente.Model.pdb
+C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Model\obj\Debug\PacienteAsistente.Model.csprojAssemblyReference.cache
+C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Model\obj\Debug\PacienteAsistente.Model.csproj.CoreCompileInputs.cache
+C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Model\obj\Debug\PacienteAsistente.Model.dll
+C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Model\obj\Debug\PacienteAsistente.Model.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Model\bin\Debug\PacienteAsistente.Model.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Model\bin\Debug\PacienteAsistente.Model.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Model\obj\Debug\PacienteAsistente.Model.csprojAssemblyReference.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Model\obj\Debug\PacienteAsistente.Model.csproj.CoreCompileInputs.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Model\obj\Debug\PacienteAsistente.Model.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Model\obj\Debug\PacienteAsistente.Model.pdb

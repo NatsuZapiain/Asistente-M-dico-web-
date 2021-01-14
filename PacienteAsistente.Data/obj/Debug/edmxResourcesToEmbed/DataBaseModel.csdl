@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ControlMedicamentoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ControlMedicamentoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Asistentes" EntityType="ControlMedicamentoModel.Asistente" />
+    <EntitySet Name="AspNetRoles" EntityType="ControlMedicamentoModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="ControlMedicamentoModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="ControlMedicamentoModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="ControlMedicamentoModel.AspNetUser" />
+    <EntitySet Name="Pacientes" EntityType="ControlMedicamentoModel.Paciente" />
+    <EntitySet Name="Tratamientoes" EntityType="ControlMedicamentoModel.Tratamiento" />
+    <AssociationSet Name="FK__Asistente__AspNe__49C3F6B7" Association="ControlMedicamentoModel.FK__Asistente__AspNe__49C3F6B7">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Asistente" EntitySet="Asistentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tratamien__IdReg__4CA06362" Association="ControlMedicamentoModel.FK__Tratamien__IdReg__4CA06362">
+      <End Role="Asistente" EntitySet="Asistentes" />
+      <End Role="Tratamiento" EntitySet="Tratamientoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="ControlMedicamentoModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="ControlMedicamentoModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Paciente__AspNet__46E78A0C" Association="ControlMedicamentoModel.FK__Paciente__AspNet__46E78A0C">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Paciente" EntitySet="Pacientes" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="ControlMedicamentoModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Asistente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="AspNetUserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PacienteId" Type="Guid" Nullable="false" />
+    <Property Name="NomAsistente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Parentesco" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="ControlMedicamentoModel.FK__Asistente__AspNe__49C3F6B7" FromRole="Asistente" ToRole="AspNetUser" />
+    <NavigationProperty Name="Tratamientoes" Relationship="ControlMedicamentoModel.FK__Tratamien__IdReg__4CA06362" FromRole="Asistente" ToRole="Tratamiento" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="ControlMedicamentoModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="ControlMedicamentoModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="ControlMedicamentoModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Asistentes" Relationship="ControlMedicamentoModel.FK__Asistente__AspNe__49C3F6B7" FromRole="AspNetUser" ToRole="Asistente" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="ControlMedicamentoModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="ControlMedicamentoModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="Pacientes" Relationship="ControlMedicamentoModel.FK__Paciente__AspNet__46E78A0C" FromRole="AspNetUser" ToRole="Paciente" />
+    <NavigationProperty Name="AspNetRoles" Relationship="ControlMedicamentoModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="Paciente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="AspNetUserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="NombreUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Genero" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Edad" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Padecimiento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Alergias" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TipoSangre" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="NumEmergencia" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CodPaciente" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="ControlMedicamentoModel.FK__Paciente__AspNet__46E78A0C" FromRole="Paciente" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="Tratamiento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="IdRegAsistente" Type="Guid" Nullable="false" />
+    <Property Name="IdUsuario" Type="Guid" Nullable="false" />
+    <Property Name="NomMedicamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoMedicamento" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DosisDia" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FechaAplicacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="HoraAplicacion" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Aplicador" Type="Guid" />
+    <NavigationProperty Name="Asistente" Relationship="ControlMedicamentoModel.FK__Tratamien__IdReg__4CA06362" FromRole="Tratamiento" ToRole="Asistente" />
+  </EntityType>
+  <Association Name="FK__Asistente__AspNe__49C3F6B7">
+    <End Type="ControlMedicamentoModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+    <End Type="ControlMedicamentoModel.Asistente" Role="Asistente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Asistente">
+        <PropertyRef Name="AspNetUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tratamien__IdReg__4CA06362">
+    <End Type="ControlMedicamentoModel.Asistente" Role="Asistente" Multiplicity="1" />
+    <End Type="ControlMedicamentoModel.Tratamiento" Role="Tratamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asistente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tratamiento">
+        <PropertyRef Name="IdRegAsistente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Type="ControlMedicamentoModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ControlMedicamentoModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Type="ControlMedicamentoModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ControlMedicamentoModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Paciente__AspNet__46E78A0C">
+    <End Type="ControlMedicamentoModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+    <End Type="ControlMedicamentoModel.Paciente" Role="Paciente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Paciente">
+        <PropertyRef Name="AspNetUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="ControlMedicamentoModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="ControlMedicamentoModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+</Schema>

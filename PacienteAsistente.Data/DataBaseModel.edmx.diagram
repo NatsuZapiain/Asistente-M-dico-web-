@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b7ee20b249e9407ca8e3b8056820ca2e" Name="Diagram1" >
+        <EntityTypeShape EntityType="ControlMedicamentoModel.Asistente" Width="1.5" PointX="5.25" PointY="10.75" />
+        <EntityTypeShape EntityType="ControlMedicamentoModel.AspNetRole" Width="1.5" PointX="0.75" PointY="6.625" />
+        <EntityTypeShape EntityType="ControlMedicamentoModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="5.375" />
+        <EntityTypeShape EntityType="ControlMedicamentoModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="8" />
+        <EntityTypeShape EntityType="ControlMedicamentoModel.AspNetUser" Width="1.5" PointX="3" PointY="5.375" />
+        <EntityTypeShape EntityType="ControlMedicamentoModel.Paciente" Width="1.5" PointX="5.25" PointY="1.375" />
+        <EntityTypeShape EntityType="ControlMedicamentoModel.Tratamiento" Width="1.5" PointX="7.5" PointY="10.625" />
+        <AssociationConnector Association="ControlMedicamentoModel.FK__Asistente__AspNe__49C3F6B7" />
+        <AssociationConnector Association="ControlMedicamentoModel.FK__Tratamien__IdReg__4CA06362" />
+        <AssociationConnector Association="ControlMedicamentoModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ControlMedicamentoModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ControlMedicamentoModel.FK__Paciente__AspNet__46E78A0C" />
+        <AssociationConnector Association="ControlMedicamentoModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
