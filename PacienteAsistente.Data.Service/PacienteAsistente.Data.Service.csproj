@@ -54,12 +54,14 @@
     <Compile Include="Interface\IBaseDataService.cs" />
     <Compile Include="Interface\IGenericLoginService.cs" />
     <Compile Include="Interface\IPacienteDataService.cs" />
+    <Compile Include="Interface\ITratamientoDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\AsistenteDataService.cs" />
     <Compile Include="Service\AspNetUserDataService.cs" />
     <Compile Include="Service\BaseService.cs" />
     <Compile Include="Service\GenericLoginService.cs" />
     <Compile Include="Service\PacienteDataService.cs" />
+    <Compile Include="Service\TratamientoDataSevice.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PacienteAsistente.Data\PacienteAsistente.Data.csproj">

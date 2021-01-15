@@ -194,6 +194,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\pascienteasistente - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\pascienteasistente - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\pascienteasistente - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -246,6 +249,9 @@
     <Content Include="Views\Asistente\Index.cshtml" />
     <Content Include="Views\Asistente\Perfil.cshtml" />
     <Content Include="Views\Paciente\Perfil.cshtml" />
+    <Content Include="Views\Asistente\DatosPaciente.cshtml" />
+    <Content Include="Views\Asistente\ListaAsistentes.cshtml" />
+    <Content Include="Views\Asistente\RegistroMedicmento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

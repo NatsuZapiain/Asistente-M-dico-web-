@@ -1,5 +1,7 @@
 ﻿
 
+using System.Collections.Generic;
+
 namespace PacienteAsistente.Model.Models
 {
     public class AsistenteViewModel
@@ -11,5 +13,12 @@ namespace PacienteAsistente.Model.Models
         public string Parentesco { get; set; }
         public string Nombre { get; set; }
        
+    }
+
+
+    public class ListaAsistentesViewModel
+    {
+        public List<AsistenteViewModel> ListaAsistentes { get; set; }
+
     }
 }

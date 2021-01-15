@@ -1,0 +1,62 @@
+﻿@model PacienteAsistente.Model.Models.TratamientoViewModel
+@{
+    ViewBag.Title = "RegistroMedicmento";
+}
+
+<h2>RegistroMedicmento</h2>
+
+<div>
+    @using (Html.BeginForm("RegistroMedicmento", "Asistente", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary("", new { @class = "text-danger", style = "color: red" })
+        <div class="row">
+            <div class="form-group">
+                <h2 style="display: inline-block;"> Nombre Medicamento: </h2>
+                <div style="display: inline-block">
+                    @Html.TextBoxFor(m => m.NomMedicamento, new { @class = "form-control", id = "name", type = "text", required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <h2 style="display: inline-block;">Tipo de medicamento: </h2>
+                <div style="display: inline-block">
+                    @Html.DropDownListFor(x => x.TipoMedicamento, new List<SelectListItem>
+                    {
+                        new SelectListItem {Text = "Tableta", Value = "Tableta"},
+                        new SelectListItem {Text = "Jarabe", Value = "Jarabe"},
+                        new SelectListItem {Text = "Inyeccion", Value = "Inyeccion"},
+                        new SelectListItem {Text = "Pomada", Value = "Pomada"},
+                        new SelectListItem {Text = "Inhalador", Value = "Inhalador"}
+                    }, "Seleccionar medicamento", new { @class = "form-control", required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <h2 style="display: inline-block;"> Dosis por dia: </h2>
+                <div style="display: inline-block">
+                    @Html.TextBoxFor(m => m.DosisDia, new { @class = "form-control", id = "name", type = "text", required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <h2 style="display: inline-block;">Cantidad de dias de tratamiento: </h2>
+                <div style="display: inline-block">
+                    @Html.TextBoxFor(m => m.Contador, new { @class = "form-control", type = "text", id = "tel", required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <h2 style="display: inline-block;">Dias de espera entre dias de aplicacion (si es diario seria 1): </h2>
+                <div style="display: inline-block">
+                    @Html.TextBoxFor(m => m.DosisVariable, new { @class = "form-control", type = "text", id = "", required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <h2 style="display: inline-block;">Fecha de inicio de tratamiento: </h2>
+                <div style="display: inline-block">
+                    @Html.TextBoxFor(m => m.FechaInicio, new { @class = "form-control", type = "date", id = "tel", required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Registrar tratamiento</button>
+            </div>
+        </div>
+    }
+</div>

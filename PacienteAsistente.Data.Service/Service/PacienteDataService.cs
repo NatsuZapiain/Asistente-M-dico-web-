@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using PacienteAsistente.Data.Service.Interface;
 
 namespace PacienteAsistente.Data.Service.Service
@@ -13,6 +14,11 @@ namespace PacienteAsistente.Data.Service.Service
         public Paciente GetByAspNet(string id)
         {
             return DataBase.Pacientes.FirstOrDefault(x => x.AspNetUserId == id);
+        }
+
+        public Paciente GetById(Guid id)
+        {
+            return DataBase.Pacientes.FirstOrDefault(x => x.Id == id);
         }
     }
 }

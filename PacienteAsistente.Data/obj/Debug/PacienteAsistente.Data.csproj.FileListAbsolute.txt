@@ -10,3 +10,15 @@ C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Data\obj\Debug\Pac
 C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Data\obj\Debug\PacienteAsistente.Data.csproj.CopyComplete
 C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Data\obj\Debug\PacienteAsistente.Data.dll
 C:\Code\AsistentePaciente\PacienteAsistente\PacienteAsistente.Data\obj\Debug\PacienteAsistente.Data.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Debug\PacienteAsistente.Data.dll.config
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Debug\PacienteAsistente.Data.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Debug\PacienteAsistente.Data.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Debug\EntityFramework.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Debug\EntityFramework.xml
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Debug\PacienteAsistente.Data.csprojAssemblyReference.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Debug\PacienteAsistente.Data.csproj.CoreCompileInputs.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Debug\PacienteAsistente.Data.csproj.CopyComplete
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Debug\PacienteAsistente.Data.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Debug\PacienteAsistente.Data.pdb

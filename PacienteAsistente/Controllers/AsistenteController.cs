@@ -21,10 +21,10 @@ namespace PacienteAsistente.Controllers
         [AuthorizedRole(RoleEnum.Asistente)]
         public ActionResult Index()
         {
-            //return View();
-            return RedirectToAction("Perfil", "Asistente");
+            return View();
         }
 
+        #region perfil
 
         [AuthorizedRole(RoleEnum.Asistente)]
         public ActionResult Perfil()
@@ -39,5 +39,47 @@ namespace PacienteAsistente.Controllers
             _asistenteService.UpdateDataPerfil(User.Identity.Name, model);
             return RedirectToAction("Perfil", "Asistente");
         }
+
+        #endregion
+
+        [AuthorizedRole(RoleEnum.Asistente)]
+        public ActionResult RegistroMedicmento()
+        {
+            return View();
+        }
+
+        [AuthorizedRole(RoleEnum.Asistente)]
+        [HttpPost]
+        public ActionResult RegistroMedicmento(TratamientoViewModel model)
+        {
+            _asistenteService.RegistroMedicamentoPaciente(User.Identity.Name, model);
+            return RedirectToAction("Index", "Asistente");
+        }
+
+        #region lista asistentes
+
+        [AuthorizedRole(RoleEnum.Asistente)]
+        public ActionResult ListaAsistentes()
+        {
+            return View(_asistenteService.getListaAsistentes(User.Identity.Name));
+        }
+
+        #endregion
+
+        [AuthorizedRole(RoleEnum.Asistente)]
+        public ActionResult RegistrAplicacion()
+        {
+            //return View();
+            return RedirectToAction("Perfil", "Asistente");
+        }
+
+        #region Datos paciente
+        [AuthorizedRole(RoleEnum.Asistente)]
+        public ActionResult DatosPaciente()
+        {
+            return View(_asistenteService.GetModelPerfilPaciente(User.Identity.Name));
+        }
+
+        #endregion
     }
 }

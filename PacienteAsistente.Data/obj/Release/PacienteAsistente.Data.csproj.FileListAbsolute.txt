@@ -1,0 +1,12 @@
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Release\PacienteAsistente.Data.dll.config
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Release\PacienteAsistente.Data.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Release\PacienteAsistente.Data.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Release\EntityFramework.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Release\EntityFramework.xml
+C:\Code\AsistenteMedico\PacienteAsistente.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Release\PacienteAsistente.Data.csprojAssemblyReference.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Release\PacienteAsistente.Data.csproj.CoreCompileInputs.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Release\PacienteAsistente.Data.csproj.CopyComplete
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Release\PacienteAsistente.Data.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data\obj\Release\PacienteAsistente.Data.pdb

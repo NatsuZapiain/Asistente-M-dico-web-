@@ -47,6 +47,7 @@
     <Compile Include="Models\AsistenteViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\PacienteViewModel.cs" />
+    <Compile Include="Models\TratamientoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

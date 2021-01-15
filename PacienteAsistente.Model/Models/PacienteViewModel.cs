@@ -16,4 +16,5 @@ namespace PacienteAsistente.Model.Models
         public string CodPaciente { get; set; }
        
     }
+
 }

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=serverpasciente.database.windows.net;initial catalog=dbpascienteasistente;Integrated Security=True;user id=floman;Password=Qwerty12.;MultipleActiveResultSets=True;Trusted_Connection=False;Encrypt=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Code\\AsistenteMedico\\PacienteAsistente\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ControlMedicamentoEntities-Web.config Connection String" description="ControlMedicamentoEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/DataBaseModel.csdl|res://*/DataBaseModel.ssdl|res://*/DataBaseModel.msl;provider=System.Data.SqlClient;provider connection string='data source=serverpasciente.database.windows.net;initial catalog=dbpascienteasistente;persist security info=True;user id=floman;password=Qwerty12.;MultipleActiveResultSets=True;App=EntityFramework'" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Code\\AsistenteMedico\\PacienteAsistente\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ControlMedicamentoEntities']/@connectionString" />
+  </parameter>
+</parameters>

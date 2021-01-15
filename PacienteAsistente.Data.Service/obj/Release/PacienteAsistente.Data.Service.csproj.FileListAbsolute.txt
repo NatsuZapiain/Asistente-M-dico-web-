@@ -1,0 +1,17 @@
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\PacienteAsistente.Data.Service.dll.config
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\PacienteAsistente.Data.Service.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\PacienteAsistente.Data.Service.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\EntityFramework.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\EntityFramework.SqlServer.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\PacienteAsistente.Data.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\PacienteAsistente.Model.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\PacienteAsistente.Data.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\PacienteAsistente.Data.dll.config
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\PacienteAsistente.Model.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\EntityFramework.xml
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\bin\Release\EntityFramework.SqlServer.xml
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\obj\Release\PacienteAsistente.Data.Service.csprojAssemblyReference.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\obj\Release\PacienteAsistente.Data.Service.csproj.CoreCompileInputs.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\obj\Release\PacienteAsistente.Data.Service.csproj.CopyComplete
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\obj\Release\PacienteAsistente.Data.Service.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Data.Service\obj\Release\PacienteAsistente.Data.Service.pdb

@@ -1,0 +1,6 @@
+C:\Code\AsistenteMedico\PacienteAsistente.Model\bin\Release\PacienteAsistente.Model.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Model\bin\Release\PacienteAsistente.Model.pdb
+C:\Code\AsistenteMedico\PacienteAsistente.Model\obj\Release\PacienteAsistente.Model.csprojAssemblyReference.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Model\obj\Release\PacienteAsistente.Model.csproj.CoreCompileInputs.cache
+C:\Code\AsistenteMedico\PacienteAsistente.Model\obj\Release\PacienteAsistente.Model.dll
+C:\Code\AsistenteMedico\PacienteAsistente.Model\obj\Release\PacienteAsistente.Model.pdb
