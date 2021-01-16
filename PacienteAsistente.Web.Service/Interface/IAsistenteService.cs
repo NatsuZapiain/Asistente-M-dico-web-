@@ -8,7 +8,8 @@ namespace PacienteAsistente.Data.Service.Interface
         AsistenteViewModel GetModelPerfil(string userName);
         PacienteViewModel GetModelPerfilPaciente(string userName);
         bool UpdateDataPerfil(string userName, AsistenteViewModel model);
-
+        listaAplicacionViewModel GetListaAplicacionViewModel(string userName);
+        bool RegistroAplicacion(string userName, listaAplicacionViewModel model);
         ListaAsistentesViewModel getListaAsistentes(string userName);
         bool RegistroMedicamentoPaciente(string userName, TratamientoViewModel model);
     }

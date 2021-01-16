@@ -45,6 +45,7 @@
     <Compile Include="Helper\EnumDescriptionAttribute.cs" />
     <Compile Include="Helper\EnumDescriptionExtensions.cs" />
     <Compile Include="Models\AsistenteViewModel.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\PacienteViewModel.cs" />
     <Compile Include="Models\TratamientoViewModel.cs" />

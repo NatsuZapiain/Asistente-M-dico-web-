@@ -67,10 +67,17 @@ namespace PacienteAsistente.Controllers
         #endregion
 
         [AuthorizedRole(RoleEnum.Asistente)]
-        public ActionResult RegistrAplicacion()
+        public ActionResult RegistroAplicacion()
         {
-            //return View();
-            return RedirectToAction("Perfil", "Asistente");
+            return View(_asistenteService.GetListaAplicacionViewModel(User.Identity.Name));
+        }
+
+        [AuthorizedRole(RoleEnum.Asistente)]
+        [HttpPost]
+        public ActionResult RegistroAplicacion(listaAplicacionViewModel model)
+        {
+            _asistenteService.RegistroAplicacion(User.Identity.Name, model);
+            return RedirectToAction("Index", "Asistente");
         }
 
         #region Datos paciente

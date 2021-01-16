@@ -7,5 +7,11 @@ namespace PacienteAsistente.Data.Service.Interface
         bool RegistroPaciente(string userName);
         PacienteViewModel GetModelPerfil(string userName);
         bool UpdateDataPerfil(string userName, PacienteViewModel model);
+        IndexViewModel IndexPaciente(string userName);
+
+        listaAplicacionViewModel GetListaAplicacionViewModel(string userName);
+        ListaAsistentesViewModel getListaAsistentes(string userName);
+
+        listaAplicacionViewModel GetHistorialAplicacion(string userName);
     }
 }

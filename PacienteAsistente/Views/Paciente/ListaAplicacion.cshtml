@@ -1,0 +1,43 @@
+﻿@model PacienteAsistente.Model.Models.listaAplicacionViewModel
+@{
+    ViewBag.Title = "ListaAplicacion";
+    Layout = "../Shared/_MyLayout.cshtml";
+}
+
+<h2>Lista Aplicacion</h2>
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <td>Fecha aplicación</td>
+            <td>Nombre de medicamento</td>
+            <td>Tipo de medicamento</td>
+            <td>Aplicador</td>
+            <td>Hora de aplicacion</td>
+            <td>Estatus</td>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in @Model.ListaAplicacion)
+        {
+            <tr>
+                <td>@item.FechaAplicacion.ToString("dd/MM/yyyy")</td>
+                <td>@item.NomMedicamento</td>
+                <td>@item.TipoMedicamento</td>
+                @if (@item.Contador == "")
+                {
+                    <td> - </td>
+                    <td> - </td>
+                    <td> Sin aplicar </td>
+                }
+                else
+                {
+                    <td>@item.Aplicador</td>
+                    <td>@item.HoraAplicacion</td>
+                    <td>Aplicada</td>
+                }
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

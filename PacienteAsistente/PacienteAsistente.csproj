@@ -252,6 +252,10 @@
     <Content Include="Views\Asistente\DatosPaciente.cshtml" />
     <Content Include="Views\Asistente\ListaAsistentes.cshtml" />
     <Content Include="Views\Asistente\RegistroMedicmento.cshtml" />
+    <Content Include="Views\Asistente\RegistroAplicacion.cshtml" />
+    <Content Include="Views\Paciente\ListaAplicacion.cshtml" />
+    <Content Include="Views\Paciente\ListaAsistentes.cshtml" />
+    <Content Include="Views\Paciente\HistorialAplicacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

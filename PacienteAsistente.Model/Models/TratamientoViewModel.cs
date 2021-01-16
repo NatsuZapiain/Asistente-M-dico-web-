@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PacienteAsistente.Model.Models
 {
@@ -16,5 +17,10 @@ namespace PacienteAsistente.Model.Models
         public DateTime FechaInicio { get; set; }
         public string DosisVariable { get; set; }
       
+    }
+    public class listaAplicacionViewModel{
+        public List<TratamientoViewModel> ListaAplicacion { get; set; }
+        public TratamientoViewModel  TratamientoAplicacion { get; set; }
+
     }
 }

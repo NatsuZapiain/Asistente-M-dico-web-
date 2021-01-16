@@ -1,7 +1,17 @@
-﻿
+﻿@model PacienteAsistente.Model.Models.IndexViewModel
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+<div>
+    <a href="@Url.Action("Perfil","Paciente")"><h2>Perfil</h2></a>
+    <a href="@Url.Action("ListaAplicacion","Paciente")"><h2>Lista Aplicacion</h2></a>
+    <a href="@Url.Action("ListaAsistentes","Paciente")"><h2>Lista Asistentes</h2></a>
+    <a href="@Url.Action("HistorialAplicacion","Paciente")"><h2>HistorialAplicacion</h2></a>
+</div>
 
+<div>
+    <h2>Nombre del paciente: <b>@Model.NombrePaciente</b></h2>
+    <h2>Codigo: <b>@Model.Codigo</b></h2>
+</div>

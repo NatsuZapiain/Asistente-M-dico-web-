@@ -1,0 +1,49 @@
+﻿@model PacienteAsistente.Model.Models.listaAplicacionViewModel
+@{
+    ViewBag.Title = "Registro Aplicacion";
+    Layout = "../Shared/_MyLayout.cshtml";
+}
+
+<h2>RegistroAplicacion</h2>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Fecha aplicación</td>
+                <td>Nombre de medicamento</td>
+                <td>Tipo de medicamento</td>
+                <td>Aplicador</td>
+                <td>Hora de aplicacion</td>
+                <td>Estatus</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @Model.ListaAplicacion)
+            {
+                <tr>
+                    <td>@item.FechaAplicacion.ToString("dd/MM/yyyy")</td>
+                    <td>@item.NomMedicamento</td>
+                    <td>@item.TipoMedicamento</td>
+                    @if (@item.Contador == "")
+                    {
+                        <td> - </td>
+                        <td> - </td>
+                        using (Html.BeginForm("RegistroAplicacion", "Asistente", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            <td style="display: none">@Html.TextBoxFor(m => m.TratamientoAplicacion.Id, new { @class = "form-control", @Value = @item.Id })</td>
+
+                            <td><button type="submit" class="btn btn-primary">Aplicar</button></td>
+                        }
+                    }
+                    else
+                    {
+                        <td>@item.Aplicador</td>
+                        <td>@item.HoraAplicacion</td>
+                        <td>Aplicada</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

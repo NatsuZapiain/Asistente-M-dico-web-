@@ -83,6 +83,53 @@ namespace PacienteAsistente.Data.Service.Service
             }
         }
 
+        public listaAplicacionViewModel GetListaAplicacionViewModel(string userName)
+        {
+            try
+            {
+                var asp = _aspNetUserDataService.GetByEmail(userName);
+                var asis = _asistenteDataService.GetByAspNet(asp.Id);
+                var hactual = DateHelper.DateMexico(DateTime.Now);
+                var result = new listaAplicacionViewModel
+                {
+                    ListaAplicacion = _tratamientoDataService.GetAll().Where(x => x.IdUsuario == asis.PacienteId && x.FechaAplicacion == hactual.Date).Select(x => new TratamientoViewModel
+                    {
+                        Id = x.Id.ToString(),
+                        NomMedicamento = x.NomMedicamento,
+                        TipoMedicamento = x.TipoMedicamento,
+                        FechaAplicacion = x.FechaAplicacion,
+                        Aplicador = x.Asistente.NomAsistente,
+                        Contador = x.Aplicador.ToString(),
+                        HoraAplicacion = x.HoraAplicacion,
+                    }).ToList()
+                };
+                return result;
+            }
+            catch (Exception e)
+            {
+                return new listaAplicacionViewModel();
+            }
+        }
+
+        public bool RegistroAplicacion(string userName, listaAplicacionViewModel model)
+        {
+            try
+            {
+                var hora = DateHelper.DateMexico(DateTime.Now);
+                var asp = _aspNetUserDataService.GetByEmail(userName);
+                var asis = _asistenteDataService.GetByAspNet(asp.Id);
+                var tratamiento = _tratamientoDataService.GetbyId(Guid.Parse(model.TratamientoAplicacion.Id));
+                tratamiento.Aplicador = asis.Id;
+                tratamiento.HoraAplicacion = hora.TimeOfDay;
+                _tratamientoDataService.Update(tratamiento);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
         public ListaAsistentesViewModel getListaAsistentes(string userName)
         {
             try

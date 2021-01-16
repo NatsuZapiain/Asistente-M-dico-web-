@@ -19,10 +19,28 @@ namespace PacienteAsistente.Controllers
         [AuthorizedRole(RoleEnum.Paciente)]
         public ActionResult Index()
         {
-            //return View();
-            return RedirectToAction("Perfil", "Paciente");
+            return View(_pacienteService.IndexPaciente(User.Identity.Name));
         }
 
+        [AuthorizedRole(RoleEnum.Paciente)]
+        public ActionResult ListaAsistentes()
+        {
+            return View(_pacienteService.getListaAsistentes(User.Identity.Name));
+        }
+
+        [AuthorizedRole(RoleEnum.Paciente)]
+        public ActionResult ListaAplicacion()
+        {
+            return View(_pacienteService.GetListaAplicacionViewModel(User.Identity.Name));
+        }
+
+        [AuthorizedRole(RoleEnum.Paciente)]
+        public ActionResult HistorialAplicacion()
+        {
+            return View(_pacienteService.GetHistorialAplicacion(User.Identity.Name));
+        }
+
+        #region perfil
 
         [AuthorizedRole(RoleEnum.Paciente)]
         public ActionResult Perfil()
@@ -37,5 +55,7 @@ namespace PacienteAsistente.Controllers
             _pacienteService.UpdateDataPerfil(User.Identity.Name, model);
             return RedirectToAction("Perfil", "Paciente");
         }
+
+        #endregion
     }
 }
