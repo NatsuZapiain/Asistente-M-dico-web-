@@ -1,54 +1,43 @@
 ﻿@model PacienteAsistente.Model.Models.PacienteViewModel
 @{
     ViewBag.Title = "DatosPaciente";
-    Layout = "../Shared/_MyLayout.cshtml";
+    Layout = "../Shared/_Asistente.cshtml";
 }
+<style>
+    .card-contenedor {
+        text-align: center;
+        background-color: rgba(193,255,255,.4);
+        border-radius: 45px;
+        color: black;
+    }
 
-<div>
-    <h1>Perfil Paciente</h1>
+    .form-group {
+        margin-bottom: 1px
+    }
+</style>
 
+<div class="card-contenedor">
     <div class="row">
         <div class="form-group">
-            <h2 style="display: inline-block;"> Nombre completo: </h2>
-            <div style="display: inline-block">
-                @Model.NombreUsuario
-            </div>
+            <h3 style="display: inline-block;"> Nombre completo:<b> @Model.NombreUsuario</b> </h3>
         </div>
         <div class="form-group">
-            <h2 style="display: inline-block;">Género: </h2>
-            <div style="display: inline-block">
-                @Model.Genero
-            </div>
+            <h3 style="display: inline-block;">Género: <b>@Model.Genero</b> </h3>
         </div>
         <div class="form-group">
-            <h2 style="display: inline-block;"> Edad: </h2>
-            <div style="display: inline-block">
-                @Model.Edad
-            </div>
+            <h3 style="display: inline-block;"> Edad: <b>@Model.Edad</b></h3>
         </div>
         <div class="form-group">
-            <h2 style="display: inline-block;">Tipo de sangre: </h2>
-            <div style="display: inline-block">
-                @Model.TipoSangre
-            </div>
+            <h3 style="display: inline-block;">Tipo de sangre: <b>@Model.TipoSangre</b></h3>
         </div>
         <div class="form-group">
-            <h2 style="display: inline-block;">Padecimiento: </h2>
-            <div style="display: inline-block">
-                @Model.Padecimiento
-            </div>
+            <h3 style="display: inline-block;">Padecimiento: <b>@Model.Padecimiento</b></h3>
         </div>
         <div class="form-group">
-            <h2 style="display: inline-block;">Alergias: </h2>
-            <div style="display: inline-block">
-                @Model.Alergias
-            </div>
+            <h3 style="display: inline-block;">Alergias: <b>@Model.Alergias</b></h3>
         </div>
         <div class="form-group">
-            <h2 style="display: inline-block;">Número de Emergencia: </h2>
-            <div style="display: inline-block">
-                @Model.NumEmergencia
-            </div>
+            <h3 style="display: inline-block;">Número de Emergencia: <b>@Model.NumEmergencia</b></h3>
         </div>
     </div>
 

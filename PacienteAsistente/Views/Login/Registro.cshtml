@@ -3,57 +3,71 @@
     ViewBag.Title = "Registro Usuario";
     Layout = "../Shared/_MyLayout.cshtml";
 }
+<style>
+    .card-contenedor {
+        text-align: center;
+        background-color: rgba(193,255,255,.4);
+        border-radius: 45px;
+        color: rgb(55,191,180);
 
-<div>
-    @using (Html.BeginForm("Registro", "Login", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-    {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary("", new { @class = "text-danger", style = "color: red" })
-        <div class="row">
-            <div class="form-group">
-                <h2 style="display: inline-block;"> Correo: </h2>
-                <div style="display: inline-block">
-                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "email", type="email", required="required" })
-                </div>
-            </div>
-            <div class="form-group">
-                <h2 style="display: inline-block;">Contraseña: </h2>
-                <div style="display: inline-block">
-                    @Html.TextBoxFor(m => m.Pass, new { @class = "form-control", type = "password", id = "pass", required="required" })
-                </div>
-            </div>
-            <div class="form-group">
-                <h2 style="display: inline-block;">Confirmar Contraseña: </h2>
-                <div style="display: inline-block">
-                    @Html.TextBoxFor(m => m.ConfirmPass, new { @class = "form-control", type = "password", id = "confirm", required="required" })
-                </div>
-            </div>
-            <div class="form-group">
-                <h2 style="display: inline-block;">Rol: </h2>
-                <div style="display: inline-block">
-                    @Html.DropDownListFor(x => x.Rol, new List<SelectListItem>
-                    {
-                        new SelectListItem {Text = "Paciente", Value = "Paciente"},
-                        new SelectListItem {Text = "Asistente", Value = "Asistente"}
-                    }, "Selecciona Rol", new { @class = "form-control", required="required", @onchange = "rol(this.value)" })
-                </div>
-            </div>
-            <div class="form-group" style="display: none" id="code">
-                <h2 style="display: inline-block;">Codigo Paciente: </h2>
-                <div style="display: inline-block">
-                    @Html.TextBoxFor(m => m.CodePaciente, new { @class = "form-control", type = "text", id = "code" })
-                </div>
-            </div>
-            <div class="form-group">
-                <button type="submit">Registrar</button>
-            </div>
-        </div>
     }
+</style>
+
+<div class="col-md-12">
+    <div class="card-contenedor">
+        <section id="loginForm" class="">
+            @using (Html.BeginForm("Registro", "Login", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger", style = "color: red" })
+                <div class="row" style="color: black">
+                    <div class="form-group">
+                        <h2 class="col-md-6" style="display: inline-block;"> Correo: </h2>
+                        <div class="col-md-6" style="display: inline-block">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "email", type = "email", required = "required", style="margin-top: 20px" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h2 class="col-md-6" style="display: inline-block;">Contraseña: </h2>
+                        <div class="col-md-6" style="display: inline-block">
+                            @Html.TextBoxFor(m => m.Pass, new { @class = "form-control", type = "password", id = "pass", required = "required", style = "margin-top: 20px" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h2 class="col-md-6" style="display: inline-block;">Confirmar Contraseña: </h2>
+                        <div class="col-md-6" style="display: inline-block">
+                            @Html.TextBoxFor(m => m.ConfirmPass, new { @class = "form-control", type = "password", id = "confirm", required = "required", style = "margin-top: 20px" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h2 class="col-md-6" style="display: inline-block;">Rol: </h2>
+                        <div class="col-md-6" style="display: inline-block">
+                            @Html.DropDownListFor(x => x.Rol, new List<SelectListItem>
+                            {
+                                new SelectListItem {Text = "Paciente", Value = "Paciente"},
+                                new SelectListItem {Text = "Asistente", Value = "Asistente"}
+                            }, "Selecciona Rol", new { @class = "form-control", required = "required", @onchange = "rol(this.value)", style = "margin-top: 20px" })
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: none" id="code">
+                        <h2 class="col-md-6" style="display: inline-block;">Código Paciente: </h2>
+                        <div class="col-md-6" style="display: inline-block">
+                            @Html.TextBoxFor(m => m.CodePaciente, new { @class = "form-control", type = "text", id = "code", style = "margin-top: 20px" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Registrar</button>
+                    </div>
+                </div>
+                <div>
+                    <h4><a href="@Url.Action("InicioSesion", "Login")" style="color: rgb(55, 191, 180)">Iniciar Sesión</a></h4> 
+                </div>
+            }
+        </section>
+    </div>
 </div>
-<br/>
-<div>
-    <a href="@Url.Action("InicioSesion", "Login")">Iniciar Sesión</a>
-</div>
+<br />
+
 <script>
     function rol(value) {
         if (value === "Paciente") {

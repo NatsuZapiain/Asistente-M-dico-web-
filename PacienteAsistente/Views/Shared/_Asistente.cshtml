@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Asistente Medico</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        body {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background: #0a032f;
+            position: absolute;
+            width: 100%;
+            top: 0;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            color: rgb(55, 191, 180);
+            margin-bottom: 0px;
+            z-index: 1
+        }
+
+        li {
+            padding-right: 20px
+        }
+    </style>
+    <link href="~/Content/styles.css" rel="stylesheet" />
+</head>
+<body style="background-image: url('https://wallpaperaccess.com/full/136940.jpg')">
+    <header>
+        <nav class="">
+            <ul class="navbar-nav" style="list-style-type: none">
+                <li>
+                    <h4><a href="@Url.Action("Perfil", "Asistente")">Perfil</a></h4>
+                </li>
+                <li>
+                    <h4><a href="@Url.Action("DatosPaciente", "Asistente")">Datos del paciente</a></h4>
+                </li>
+                <li>
+                    <h4><a href="@Url.Action("ListaAsistentes", "Asistente")">Lista Asistentes</a></h4>
+                </li>
+                <li>
+                    <h4><a href="@Url.Action("RegistroAplicacion", "Asistente")">Registro de aplicación de medicamento</a></h4>
+                </li>
+                <li>
+                    <h4><a href="@Url.Action("RegistroMedicmento", "Asistente")">Registro del medicamento</a></h4>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <p>&copy; @DateTime.Now.Year - "Proyecto Titulación" 5NV82 Hernandez Zapiain Brenda Itzel</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,17 +1,43 @@
 ﻿@model PacienteAsistente.Model.Models.IndexViewModel
 @{
     ViewBag.Title = "Index";
+    Layout = "../Shared/_MyLayout.cshtml";
 }
+<style>
+    .card-contenedor {
+        text-align: center;
+        background-color: rgba(193,255,255,.4);
+        border-radius: 27px;
+        color: black;
+        margin-top: -40px;
+    }
+    .card-contenedor2 {
+        text-align: center;
+        background-color: rgba(193,255,255,.4);
+        border-radius: 27px;
+        color: black;
+        margin-top: 40px;
+    }
+    a {
+        color: black
+    }
+</style>
 
-<h2>Index</h2>
-<div>
-    <a href="@Url.Action("Perfil","Paciente")"><h2>Perfil</h2></a>
-    <a href="@Url.Action("ListaAplicacion","Paciente")"><h2>Lista Aplicacion</h2></a>
-    <a href="@Url.Action("ListaAsistentes","Paciente")"><h2>Lista Asistentes</h2></a>
-    <a href="@Url.Action("HistorialAplicacion","Paciente")"><h2>HistorialAplicacion</h2></a>
-</div>
-
-<div>
+<div class="card-contenedor">
     <h2>Nombre del paciente: <b>@Model.NombrePaciente</b></h2>
-    <h2>Codigo: <b>@Model.Codigo</b></h2>
+    <h2>Código: <b>@Model.Codigo</b></h2>
+
 </div>
+<div class="card-contenedor2">
+    <h2>Menú</h2>
+    <a href="@Url.Action("Perfil", "Paciente")">
+        <h2>Perfil Paciente</h2></a>
+    <a href="@Url.Action("ListaAplicacion", "Paciente")">
+        <h2>Lista de Aplicación</h2></a>
+    <a href="@Url.Action("ListaAsistentes", "Paciente")">
+        <h2>Lista de Asistentes</h2></a>
+    <a href="@Url.Action("HistorialAplicacion", "Paciente")">
+        <h2>Historial de Aplicación</h2></a>
+</div>
+
+

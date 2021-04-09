@@ -1,29 +1,34 @@
 ﻿@model PacienteAsistente.Model.Models.ListaAsistentesViewModel
 @{
     ViewBag.Title = "Lista Asistentes";
-    Layout = "../Shared/_MyLayout.cshtml";
+    Layout = "../Shared/_paciente.cshtml";
 }
-
-<h2>Lista Asistentes</h2>
+<style>
+    td {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+</style>
+<h2 style="color: steelblue; background: black; width: fit-content; ">Lista Asistentes</h2>
 
 <div>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Nombre Completo</th>
-            <th>Parentesco</th>
-            <th>Telefono</th>
-        </tr>
+    <table class="table" style="background: white; z-index: 100; position: relative">
+        <thead style="color: white; background: #0a032f">
+            <tr>
+                <td>Nombre Completo</td>
+                <td>Parentesco</td>
+                <td>Telefono</td>
+            </tr>
         </thead>
         <tbody>
-        @foreach (var item in Model.ListaAsistentes)
-        {
-            <tr>
-                <td>@item.Nombre</td>
-                <td>@item.Parentesco</td>
-                <td>@item.Telefono</td>
-            </tr>
-        }
+            @foreach (var item in Model.ListaAsistentes)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@item.Parentesco</td>
+                    <td>@item.Telefono</td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>

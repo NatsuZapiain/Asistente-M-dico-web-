@@ -1,17 +1,22 @@
 ﻿@model PacienteAsistente.Model.Models.ListaAsistentesViewModel
 @{
     ViewBag.Title = "ListaAsistentes";
-    Layout = "../Shared/_MyLayout.cshtml";
+    Layout = "../Shared/_Asistente.cshtml";
 }
-
-<h2>ListaAsistentes</h2>
+<style>
+    td {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+</style>
+<h2 style="color: steelblue; background: black; width: fit-content; ">Lista de Asistentes</h2>
 <div>
-    <table class="table">
-        <thead>
+    <table class="table" style="background: white; z-index: 100; position: relative">
+        <thead style="color: white; background: #0a032f">
             <tr>
-                <th>Nombre Completo</th>
-                <th>Parentesco</th>
-                <th>Telefono</th>
+                <td>Nombre Completo</td>
+                <td>Parentesco</td>
+                <td>Telefono</td>
             </tr>
         </thead>
         <tbody>

@@ -1,43 +1,48 @@
 ﻿@model PacienteAsistente.Model.Models.listaAplicacionViewModel
 @{
     ViewBag.Title = "ListaAplicacion";
-    Layout = "../Shared/_MyLayout.cshtml";
+    Layout = "../Shared/_paciente.cshtml";
 }
-
-<h2>Lista Aplicacion</h2>
-<div>
-    <table class="table">
-        <thead>
-        <tr>
-            <td>Fecha aplicación</td>
-            <td>Nombre de medicamento</td>
-            <td>Tipo de medicamento</td>
-            <td>Aplicador</td>
-            <td>Hora de aplicacion</td>
-            <td>Estatus</td>
-        </tr>
+<style>
+    td {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+</style>
+<h2 style="color: steelblue; background: black; width: fit-content;">Lista de Aplicación diaria</h2>
+<div class="">
+    <table class="table" style="background: white; z-index: 100; position: relative">
+        <thead style="color: white; background: #0a032f">
+            <tr>
+                <td>Fecha aplicación</td>
+                <td>Nombre de medicamento</td>
+                <td>Tipo de medicamento</td>
+                <td>Aplicador</td>
+                <td>Hora de aplicacion</td>
+                <td>Estatus</td>
+            </tr>
         </thead>
         <tbody>
-        @foreach (var item in @Model.ListaAplicacion)
-        {
-            <tr>
-                <td>@item.FechaAplicacion.ToString("dd/MM/yyyy")</td>
-                <td>@item.NomMedicamento</td>
-                <td>@item.TipoMedicamento</td>
-                @if (@item.Contador == "")
-                {
-                    <td> - </td>
-                    <td> - </td>
-                    <td> Sin aplicar </td>
-                }
-                else
-                {
-                    <td>@item.Aplicador</td>
-                    <td>@item.HoraAplicacion</td>
-                    <td>Aplicada</td>
-                }
-            </tr>
-        }
+            @foreach (var item in @Model.ListaAplicacion)
+            {
+                <tr>
+                    <td>@item.FechaAplicacion.ToString("dd/MM/yyyy")</td>
+                    <td>@item.NomMedicamento</td>
+                    <td>@item.TipoMedicamento</td>
+                    @if (@item.Contador == "")
+                    {
+                        <td> - </td>
+                        <td> - </td>
+                        <td> Sin aplicar </td>
+                    }
+                    else
+                    {
+                        <td>@item.Aplicador</td>
+                        <td>@item.HoraAplicacion</td>
+                        <td>Aplicada</td>
+                    }
+                </tr>
+            }
         </tbody>
     </table>
 </div>

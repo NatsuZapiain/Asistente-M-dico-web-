@@ -1,11 +1,21 @@
 ﻿@model PacienteAsistente.Model.Models.AsistenteViewModel
 @{
     ViewBag.Title = "Perfil";
-    Layout = "../Shared/_MyLayout.cshtml";
+    Layout = "../Shared/_Asistente.cshtml";
 }
+<style>
+    .card-contenedor {
+        text-align: center;
+        background-color: rgba(193,255,255,.4);
+        border-radius: 45px;
+        color: black;
+    }
 
-<div>
-    <h1>Perfil</h1>
+    .form-group {
+        margin-bottom: 1px
+    }
+</style>
+<div class="card-contenedor">
     @using (Html.BeginForm("Perfil", "Asistente", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
@@ -33,6 +43,7 @@
                     @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control", type = "tel", id = "tel", required = "required" })
                 </div>
             </div>
+            <br/>
             <div class="form-group">
                 <button type="submit">Actualizar Campos</button>
             </div>

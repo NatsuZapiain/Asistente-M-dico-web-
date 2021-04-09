@@ -1,14 +1,20 @@
 ﻿@model PacienteAsistente.Model.Models.listaAplicacionViewModel
 @{
     ViewBag.Title = "Registro Aplicacion";
-    Layout = "../Shared/_MyLayout.cshtml";
+    Layout = "../Shared/_Asistente.cshtml";
 }
 
-<h2>RegistroAplicacion</h2>
+<style>
+    td {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+</style>
+<h2 style="color: steelblue; background: black; width: fit-content; ">Registro de Aplicación</h2>
 
 <div>
-    <table class="table">
-        <thead>
+    <table class="table" style="background: white; z-index: 100; position: relative">
+        <thead style="color: white; background: #0a032f">
             <tr>
                 <td>Fecha aplicación</td>
                 <td>Nombre de medicamento</td>

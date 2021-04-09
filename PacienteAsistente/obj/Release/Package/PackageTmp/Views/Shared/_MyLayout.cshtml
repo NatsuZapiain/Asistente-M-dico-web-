@@ -7,14 +7,27 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
-</head>
-<body>
+    <style>
+        body {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
+        footer {
+            position: absolute;
+            bottom: 0;
+            color:  rgb(55,191,180)
+        }
+    </style>
+    <link href="~/Content/styles.css" rel="stylesheet" />
+</head>
+<body style="        background-image: url('https://wallpaperaccess.com/full/136940.jpg')">
 <div class="container body-content">
     @RenderBody()
-    <hr />
     <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <p>&copy; @DateTime.Now.Year - "Proyecto Titulación" 5NV82 Hernandez Zapiain Brenda Itzel</p>
     </footer>
 </div>
 

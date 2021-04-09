@@ -3,42 +3,52 @@
     ViewBag.Title = "Inicio Sesion";
     Layout = "../Shared/_MyLayout.cshtml";
 }
-
+<style>
+    .card-contenedor {
+        text-align: center;
+        background-color: rgba(193,255,255,.4);
+        border-radius: 45px;
+        color: rgb(55,191,180);
+    }
+</style>
 <div class="col-md-12">
-    <section id="loginForm">
-        @using (Html.BeginForm("InicioSesion", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-        {
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                <h2>Correo</h2>
-                <div class="col-md-10">
-                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", required="required" })
-                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                <h2>Contraseña</h2>
-                <div class="col-md-10">
-                    @Html.PasswordFor(m => m.Pass, new { @class = "form-control", required ="required" })
-                    @Html.ValidationMessageFor(m => m.Pass, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <div class="checkbox">
-                        @Html.CheckBoxFor(m => m.RememberMe)
-                        <p>Recordar Usuario</p>
+    <div class="card-contenedor">
+        <section id="loginForm" class="">
+            @using (Html.BeginForm("InicioSesion", "Login", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+                <div class="form-group">
+                    <h2 style="color: black">Correo</h2>
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(m => m.Email, new {@class = "form-control", required = "required", style="display: block; margin : 0 auto;"})
+                        @Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})
                     </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Iniciar Sesion" class="btn btn-default" />
+                <div class="form-group">
+                    <h2 style="color: black" >Contraseña</h2>
+                    <div class="col-md-12">
+                        @Html.PasswordFor(m => m.Pass, new {@class = "form-control", required = "required", style = "display: block; margin : 0 auto;" })
+                        @Html.ValidationMessageFor(m => m.Pass, "", new {@class = "text-danger"})
+                    </div>
                 </div>
-            </div>
-        }
-    </section>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-7">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(m => m.RememberMe )
+                            <span>Recordar Usuario</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class=" col-md-12">
+                        <input type="submit" value="Iniciar Sesion" class="btn btn-default" style = "display: block; margin : 0 auto;"/>
+                    </div>
+                </div>
+            }
+        </section>
+        <h4><a href="@Url.Action("Registro", "Login")" style="color: rgb(55, 191, 180)">Registrarse</a></h4> 
+    </div>
 </div>
-<a href="@Url.Action("Registro", "Login")">Registrarse</a>
+
 

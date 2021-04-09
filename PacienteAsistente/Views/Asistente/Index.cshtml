@@ -1,13 +1,26 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    Layout = "../Shared/_MyLayout.cshtml";
 }
+<style>
+  
+    .card-contenedor2 {
+        text-align: center;
+        background-color: rgba(193,255,255,.4);
+        border-radius: 27px;
+        color: black;
+        margin-top: 40px;
+    }
 
-<h2>Index</h2>
-<div>
-    <h1><a href="@Url.Action("Perfil","Asistente")">Perfil</a></h1>
-    <h1><a href="@Url.Action("DatosPaciente","Asistente")">Datos del paciente</a></h1>
-    <h1><a href="@Url.Action("ListaAsistentes","Asistente")">Lista Asistentes</a></h1>
-    <h1><a href="@Url.Action("RegistroAplicacion","Asistente")">Registro de aplicación de medicamento</a></h1>
-    <h1><a href="@Url.Action("RegistroMedicmento","Asistente")">Registro del medicamento</a></h1>
+    a {
+        color: black
+    }
+</style>
+<div class="card-contenedor2">
+    <a href="@Url.Action("Perfil","Asistente")"><h1>Perfil</h1></a>
+    <a href="@Url.Action("DatosPaciente","Asistente")"><h1>Datos del paciente</h1></a>
+    <a href="@Url.Action("ListaAsistentes","Asistente")"><h1>Lista Asistentes</h1></a>
+    <a href="@Url.Action("RegistroAplicacion","Asistente")"><h1>Registro de aplicación de medicamento</h1></a>
+    <a href="@Url.Action("RegistroMedicmento","Asistente")"><h1>Registro del medicamento</h1></a>
 </div>

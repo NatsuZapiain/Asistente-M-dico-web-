@@ -1,12 +1,18 @@
 ﻿@model PacienteAsistente.Model.Models.listaAplicacionViewModel
 @{
     ViewBag.Title = "HistorialAplicacion";
+    Layout = "../Shared/_paciente.cshtml";
 }
-
-<h2>HistorialAplicacion</h2>
-<div>
-    <table class="table">
-        <thead>
+<style>
+    td {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+</style>
+<h2 style="color: steelblue; background: black; width: fit-content; ">Historial de Aplicación</h2>
+<div class="">
+    <table class="table" style="background: white; z-index: 100; position: relative">
+        <thead style="color: white; background: #0a032f">
         <tr>
             <td>Fecha aplicación</td>
             <td>Nombre de medicamento</td>
